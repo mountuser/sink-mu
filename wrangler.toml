@@ -1,0 +1,27 @@
+# Converted from JSON to TOML
+
+"$schema" = "node_modules/wrangler/config-schema.json"
+name = "sink"
+main = "dist/server/index.mjs"
+
+[assets]
+binding = "ASSETS"
+directory = "dist/public"
+
+compatibility_date = "2024-09-15"
+compatibility_flags = ["nodejs_compat"]
+
+keep_vars = true
+upload_source_maps = true
+
+[ai]
+binding = "AI"
+
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
+dataset = "sink"
+
+[[kv_namespaces]]
+binding = "KV"
+# IMPORTANT: Change this to your KV namespace ID
+id = "a9607b4270e744aaa6ab83648f323959"
